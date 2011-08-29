@@ -1,0 +1,56 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Contact Michael</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    	<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/michael.css"> 
+		<link rel="stylesheet" type="text/css" href="/stylesheets/bx_styles/bx_styles.css" /> 
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png"> 
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'> 
+            <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/michael.css"> 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/light-box/jquery.lightbox-0.5.css" media="screen" /> 
+ 
+        <script src="/javascripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="/javascripts/jquery.bxSlider.min.js" type="text/javascript" charset="utf-8"></script> 
+            </head> 
+    <body class="contact"> 
+	
+		<div class="wrapper"> 
+			<div class="menu"> 
+				<ul id="menu"> 
+					<li class="aboutLink"><a href="about.html">ABOUT</a></li> 
+					<li class="scheduleLink"><a href="services.html">SERVICES</a></li> 
+					<li class="contactLink"><a href="contact.html">CONTACT</a></li>  
+					<li	class="homeLink"><a href="/">back home</a></li> 
+				</ul> 
+			</div>	
+			<div class="main"> 
+	<h1>Contact Michael</h1> 
+	<form id="mailerForm" action="/mailer/sendmail" method="POST"> 
+	<input type="hidden" name="subject" value="Message from site"/> 
+	<input type="hidden" name="to"  value="mailer@michaelbockoven.com"> 
+	<input type="hidden" name="redirect" value="/"> 
+	<label>Email</label> 
+	<input type="text" id="from" name="from"/> 
+	<label>Message</label> 
+	<textarea name="msg"></textarea> 
+	<div class="actions"> 
+	<a href="#" id="send">Send</a> 
+	</div> 
+</div> 
+ 
+<script> 
+$(function(){
+	$("#menu li:last-child").toggle();
+	$("#from").focus();
+	$("#send").click(function(){
+		$("#mailerForm").submit();
+	})
+})
+</script>		</div> 
+		<div class="footer"> 
+			<span class="copy">&copy;</span> 2011 Designed by <a href="http://www.flow7.net">Flow7 LLC</a> 
+		</div> 
+    </body> 
+</html>
